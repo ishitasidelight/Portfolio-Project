@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+
+<head>
+    <title>PORTFOLIO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0%;
+        }
+
+        body {
+            background-color: rgb(7, 2, 26);
+            color: aliceblue
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 50px;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: rgb(15, 23, 93);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white
+        }
+
+        nav ul li a:hover {
+            color: rgb(165, 184, 219)
+        }
+
+        main hr {
+            border: 0;
+            background: rgb(165, 184, 219);
+            height: 1.2px;
+            margin: 55px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 130px 0;
+            align-items: center;
+        }
+
+        .firstsection>div {
+            width: 30%;
+
+        }
+
+        .leftsection {
+
+            font-size: 2.5rem;
+            margin: 50px 0;
+
+        }
+
+        .button {
+            margin: 43px;
+        }
+
+        .leftsection .button {
+            padding: 70px 0;
+        }
+
+        .leftsection .btn {
+
+            padding: 12px;
+            background: #1e2176;
+            color: aliceblue;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .rightsection img {
+            width: 80%;
+            margin: 50px 0;
+
+
+        }
+
+        .purple {
+            color: rgb(200, 166, 233);
+        }
+
+        #element {
+            color: rgb(200, 166, 233);
+        }
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+            ;
+        }
+
+        .secondsection h1 {
+            font-size: 1.9rem;
+        }
+
+        .secondsection .box {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 55px 0;
+            display: flex;
+        }
+
+        .gray {
+            color: rgb(54, 71, 71);
+        }
+
+        .secondsection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px
+        }
+
+        .imgtop {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .verticaltitle {
+            position: relative;
+            top: 75px;
+            width: 150px;
+
+        }
+
+        .verticaldesc {
+            position: relative;
+            top: 85px;
+            width: 150px;
+            font-size: 9px;
+            ;
+
+        }
+
+        footer {
+            background-color: rgb(29, 9, 50);
+
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .txtcenter {
+            text-align: center;
+            color: rgb(171, 187, 188);
+            padding: 12px 0;
+        }
+
+        .about {
+
+            padding: 80px 0;
+
+        }
+
+        .row {
+            color: rgb(194, 182, 206);
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .abtcol1 {
+            flex-basis: 35%;
+        }
+
+        .abtcol1 img {
+            width=100%;
+            border-radius: 15px;
+        }
+
+        .abtcol2 {
+            flex-basis: 50%;
+        }
+
+        .tabt {
+            display: flex;
+            margin: 20px 0 40px;
+        }
+
+        .tablink {
+            margin-right: 50px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: grab;
+            position: relative;
+        }
+
+        .tablink::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #abcce4;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transition: 0.5s;
+        }
+
+        .tablink.activelink::after {
+            width: 80%;
+        }
+
+        .tab-content ul li {
+            list-style: none;
+            margin: 10px 0;
+        }
+
+        .tab-content ul li span {
+            color: #abcce4;
+            font-size: 14px;
+        }
+
+
+
+        .tablink.activelink::after {
+            width: 50%;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active-tab {
+            display: block;
+        }
+
+        .abc div {
+            transition: background 0.5s, transform 0.5s;
+        }
+
+        .abc {
+            text-decoration: none;
+            color: #ffffff;
+            display: inline-block;
+        }
+
+        .abc:hover {
+            background-color: rgb(29, 9, 50);;
+            transform: translate(-20px);
+        }
+        .btn{
+            display:inline-block;
+            background: #1e2176;
+        }
+        .contact{
+            width: 100%;
+        }
+        form input, form textarea{
+            width: 100%;
+            border: 0;
+            outline: none;
+            background: #262626;
+            padding: 15px;
+            margin:1px 0;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 6px;
+        }
+        @media only screen and (max-width:600px){
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left"><img src="C:\Users\hp\OneDrive\Pictures\Screenshots\Screenshot 2024-02-18 195643.png"
+                    height="50"> Ishita's Portfolio </div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">
+                    <li>Home</li></a></li>
+                    <li><a href="/">
+                    <li>About</li></a></li>
+                    <li><a href="/">
+                    <li>Services</li></a></li>
+                    <li><a href="/">
+                    <li>Contact Me</li></a></li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, I am <span class="purple">Ishita Pandey</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit Github</button>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="C:\Users\hp\Downloads\webdp.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondsection">
+            <span class="gray">What I have done so far</span>
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="imgtop" src="devp.png" alt="">
+                    <div class="verticaltitle">
+                        HTML Developer
+                    </div>
+                    <div class="verticaldesc">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero unde omnis ullam, enim facilis
+                        possimus accus, Dolores mollitia odio quos. Facilis, incidunt?
+                    </div>
+
+                </div>
+                <div class="vertical">
+                    <img class="imgtop" src="devp.png" alt="">
+                    <div class="verticaltitle">
+                        HTML Developer
+                    </div>
+                    <div class="verticaldesc">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero unde omnis ullam, enim facilis
+                        possimus accus, Dolores mollitia odio quos. Facilis, incidunt?
+                    </div>
+
+                </div>
+                <div class="vertical">
+                    <img class="imgtop" src="devp.png" alt="">
+                    <div class="verticaltitle">
+                        HTML Developer
+                    </div>
+                    <div class="verticaldesc">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero unde omnis ullam, enim facilis
+                        possimus accus, Dolores mollitia odio quos. Facilis, incidunt?
+                    </div>
+
+                </div>
+                <div class="vertical">
+                    <img class="imgtop" src="devp.png" alt="">
+                    <div class="verticaltitle">
+                        HTML Developer
+                    </div>
+                    <div class="verticaldesc">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero unde omnis ullam, enim facilis
+                        possimus accus, Dolores mollitia odio quos. Facilis, incidunt?
+                    </div>
+
+                </div>
+                <div class="vertical">
+                    <img class="imgtop" src="devp.png" alt="">
+                    <div class="verticaltitle">
+                        HTML Developer
+                    </div>
+                    <div class="verticaldesc">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero unde omnis ullam, enim facilis
+                        possimus accus, Dolores mollitia odio quos. Facilis, incidunt?
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+        </section>
+        <hr>
+        <div id="about">
+
+            <div class="container">
+                <div class="row">
+                    <div class="abtcol1">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPTjwMUYHsDnI-gxKvvxIwZSSDCtzYM4Xx6yeC1-2NK8KFgcV2hwgtk0UMFOHTQmdLwHc&usqp=CAU">
+                    </div>
+                    <div class="abtcol2">
+                        <div class="abc" style="padding: 18px;">
+                            <h1>About Me</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro obcaecati quisquam aut
+                                facilis nemo maiores consectetur et illo? Expedita iure provident voluptates laudantium
+                                maiores error nisi facilis facere architecto tenetur.</p>
+                            <div class="tabt">
+                                <p class="tablink activelink" onclick="opentab('Ski')">Skills</p>
+                                <p class="tablink" onclick="opentab('Experience')">Experience</p>
+                                <p class="tablink" onclick="opentab('Education')">Education</p>
+
+                            </div>
+                        
+                        <div class="tab-content active-tab" id="Ski">
+                            <ul>
+                                <li class="1"><span><b>UI/UX</b></span><br><i>Design WEB Interface</i></li><br>
+                                <li><span><b>Web Developement</b></span><br><i>Web Developement</i></li><br>
+                                <li><span><b>App Developement</b></span></li></span><i>Building Andriod Apps</i></li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="Experience">
+                            <ul>
+                                <li class="1"><span><b>internship at</b></span><br><i>bharat intern</i></li><br>
+                                <li><span><b>cybersecurity workshop at</b></span><br><i>palo alto</i></li><br>
+                                <li><span><b>hackathon at</b></span></li></span><i>gdsc</i></li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="Education">
+                            <ul>
+                                <li><span><b>course</b></span><br><i>Btech</i></li>
+                                <li><span><b>Branch</b></span><br><i>CSE-AI</i></li>
+                                <li><span><b>college</b></span></li></span><i>glbitm</i></li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main><br>
+    <hr>
+    <form name="submit-to-google-sheet" style="padding: 19px;">
+    <section id="contact">
+        <h2>Contact</h2>
+       
+            <label for="name"><p><i></i>Name:</p></label>
+            <input type="text" id="name" name="name" required>
+            <label for="email"><p><i class="fas fa-paper-plane"></i>Email:</p></label>
+            <input type="email" id="email" name="email" required>
+            <label for="message"><p><i></i>Message:</p></label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="btn">Submit</button>   
+        </form><br><br>
+        <hr>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="footerfirst">
+                <h3>Ishita's Developer Portfolio</h3>
+            </div>
+            <div class="footersecond">
+                <ul>
+                    <li>Home</li>
+
+                </ul>
+            </div>
+            <div class="footerthird">
+                <ul>
+
+                    <li>About</li>
+
+                </ul>
+            </div>
+            <div class="footerfourth">
+                <ul>
+
+                    <li>Service</li>
+
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="txtcenter">
+            copyright &#169;ishitasportfolio.com
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Graphic Designer', 'Web Designer', 'Video Editor'],
+            typeSpeed: 50,
+        });
+    </script>
+    <script>
+        var tablinks = document.getElementsByClassName("tablink");
+        var tabcontents = document.getElementsByClassName("tab-content");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("activelink");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("activelink");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzgZxxmcx_Youdbef5Wg1w1qKDOqpigNnfOVcm0jyKqnXlMMQBMZ3Vf6m09AF-MXl3p/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+</body>
+
+</html>
